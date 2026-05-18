@@ -1,7 +1,11 @@
 {
   "name": "ChillAura 图标库",
-  "description": "ChillAura804 自用图标库，自动生成，图标数量：1",
+  "description": "ChillAura804 自用图标库，自动生成，图标数量：2",
   "icons": [
+    {
+      "name": "knockout",
+      "url": "https://raw.githubusercontent.com/ChillAura804/icons/main/img/knockout.png"
+    },
     {
       "name": "TAY",
       "url": "https://raw.githubusercontent.com/ChillAura804/icons/main/img/TAY.png"
