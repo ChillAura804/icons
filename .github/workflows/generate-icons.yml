@@ -1,0 +1,44 @@
+name: Generate Icon JSON
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "img/**"
+      - "scripts/generate-icons.js"
+      - ".github/workflows/generate-icons.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate icons.json
+        run: node scripts/generate-icons.js
+
+      - name: Commit icons.json
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add icons.json
+          git commit -m "Update icons.json"
+          git push
