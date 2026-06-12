@@ -1,7 +1,11 @@
 {
   "name": "ChillAura 图标库",
-  "description": "ChillAura804 自用图标库，自动生成，图标数量：2",
+  "description": "ChillAura804 自用图标库，自动生成，图标数量：3",
   "icons": [
+    {
+      "name": "qidian",
+      "url": "https://raw.githubusercontent.com/ChillAura804/icons/main/img/qidian.png"
+    },
     {
       "name": "TAY",
       "url": "https://raw.githubusercontent.com/ChillAura804/icons/main/img/TAY.PNG"
